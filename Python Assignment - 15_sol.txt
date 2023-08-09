@@ -1,0 +1,193 @@
+Python Assignment - 15
+
+1. How many seconds are in an hour? Use the interactive interpreter as a calculator and multiply the
+   number of seconds in a minute (60) by the number of minutes in an hour (also 60).
+
+Sol: seconds_in_minute = 60
+     minutes_in_hour = 60
+
+    seconds_in_hour = seconds_in_minute * minutes_in_hour
+    print(seconds_in_hour)
+
+  Output:- 3600
+
+
+ 2. Assign the result from the previous task (seconds in an hour) to a variable called
+    seconds_per_hour.
+
+Sol: We can assign the result to a variable called seconds_per_hour like this:-
+
+    Eg - seconds_in_minute = 60
+         minutes_in_hour = 60
+
+         seconds_per_hour = seconds_in_minute * minutes_in_hour
+         print(seconds_per_hour)
+
+   Output :- 3600
+
+   But now, the value 3600 is stored in the variable seconds_per_hour for later use in your Python program.
+
+
+3. How many seconds do you think there are in a day? Make use of the variables seconds per hour
+   and minutes per hour.
+
+Sol: To calculate the number of seconds in a day, you can use the seconds_per_hour variable and multiply it by the number of hours in a day (24 hours). 
+
+    Eg - seconds_per_hour = 3600  # Value calculated earlier
+         hours_in_day = 24
+
+        seconds_in_day = seconds_per_hour * hours_in_day
+        print(seconds_in_day)
+
+    Output: 86400
+
+4. Calculate seconds per day again, but this time save the result in a variable called seconds_per_day
+
+Sol: We can calculate the number of seconds in a day and store the result in a variable called seconds_per_day:-
+
+     Eg - seconds_per_hour = 3600
+          hours_in_day = 24
+
+          seconds_per_day = seconds_per_hour * hours_in_day
+          print(seconds_per_day)
+
+    Output:  86400
+
+
+5. Divide seconds_per_day by seconds_per_hour. Use floating-point (/) division.
+
+Sol: We can divide seconds_per_day by seconds_per_hour using floating-point division.
+
+
+     Eg - seconds_per_day = 86400  # Value calculated earlier
+          seconds_per_hour = 3600  # Value calculated earlier
+
+         division_result = seconds_per_day / seconds_per_hour
+         print(division_result)
+
+   Output: 24.0
+
+6. Divide seconds_per_day by seconds_per_hour, using integer (//) division. Did this number agree
+   with the floating-point value from the previous question, aside from the final .0?
+
+Sol: We can use integer division (//) to divide seconds_per_day by seconds_per_hour.
+
+    Eg - seconds_per_day = 86400  # Value calculated earlier
+         seconds_per_hour = 3600  # Value calculated earlier
+
+         integer_division_result = seconds_per_day // seconds_per_hour
+         print(integer_division_result)
+
+   Output : 24
+
+   Yes, the integer division result of seconds_per_day by seconds_per_hour is 24, which agrees with the floating-point value of 24.0 
+   from the previous question, aside from the final .0. The decimal part was truncated due to integer division.
+
+
+7. Write a generator, genPrimes, that returns the sequence of prime numbers on successive calls to
+   its next() method: 2, 3, 5, 7, 11, ...
+
+Sol: An example implementation of the genPrimes generator that yields the sequence of prime numbers:-
+
+    Eg - def is_prime(num):
+    if num <= 1:
+        return False
+    if num <= 3:
+        return True
+    if num % 2 == 0 or num % 3 == 0:
+        return False
+    i = 5
+    while i * i <= num:
+        if num % i == 0 or num % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+def genPrimes():
+    num = 2
+    while True:
+        if is_prime(num):
+            yield num
+        num += 1
+
+# Create a generator instance
+prime_generator = genPrimes()
+
+# Print the first few prime numbers
+for _ in range(10):
+    print(next(prime_generator))
+
+
+This code defines a genPrimes generator function that yields prime numbers on successive calls to its next() method. The is_prime function is used to check if a number is prime. The generator starts from 2 and keeps generating prime numbers indefinitely. The example above prints the first 10 prime numbers, but you can adjust the range as needed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
